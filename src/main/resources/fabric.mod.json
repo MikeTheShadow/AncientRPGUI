@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ancientrpgui",
+  "version": "${version}",
+  "name": "AncientRPGUI",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/ancientrpgui/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.ancientrpg.client.AncientrpguiClient"
+    ],
+    "main": [
+      "org.ancientrpg.Ancientrpgui"
+    ]
+  },
+  "mixins": [
+    "ancientrpgui.mixins.json",
+    {
+      "config": "ancientrpgui.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
